@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -110,7 +111,21 @@ fun HomeScreen(){
 
                         colors = ButtonDefaults.buttonColors(Color(0xffFFC23D)),
                         modifier = Modifier
+                            .padding(top = 100.dp)
+                            .width(270.dp)
+                            .height(48.dp),
+                        shape = RoundedCornerShape(
+                            topStart = 10.dp,
+                            topEnd = 10.dp,
+                            bottomStart = 10.dp,
+                            bottomEnd = 10.dp
+                        )
                     ) {
+                        Text(
+                            text = "Get Started",
+                            fontSize = 17.sp,
+                            color = Color(0xff3347B0)
+                        )
 
                     }
 
