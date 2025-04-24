@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.lion_school.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -111,15 +112,18 @@ fun HomeScreen(){
 
                         colors = ButtonDefaults.buttonColors(Color(0xffFFC23D)),
                         modifier = Modifier
-                            .padding(top = 100.dp)
+                            .padding(top = 150.dp)
                             .width(270.dp)
                             .height(48.dp),
+                        border = BorderStroke(2.dp, color = Color(0xFF334780)),
+
                         shape = RoundedCornerShape(
-                            topStart = 10.dp,
-                            topEnd = 10.dp,
-                            bottomStart = 10.dp,
-                            bottomEnd = 10.dp
-                        )
+                            topStart = 15.dp,
+                            topEnd = 15.dp,
+                            bottomStart = 15.dp,
+                            bottomEnd = 15.dp
+                        ),
+
                     ) {
                         Text(
                             text = "Get Started",
@@ -130,6 +134,49 @@ fun HomeScreen(){
                     }
 
                 }
+            }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Image(
+                    painter = painterResource(
+                        R.drawable.youtube
+                    ),
+                    contentDescription = "",
+                    modifier = Modifier
+                        .size(50.dp)
+                        .padding(start = 20.dp)
+                )
+
+                Image(
+                    painter = painterResource(
+                        R.drawable.twitter
+                    ),
+                    contentDescription = "",
+                    modifier = Modifier
+                        .size(50.dp)
+                        .padding(start = 20.dp)
+                )
+                Image(
+                    painter = painterResource(
+                        R.drawable.instagram
+                    ),
+                    contentDescription = "",
+                    modifier = Modifier
+                        .size(50.dp)
+                        .padding(start = 20.dp)
+                )
+                Image(
+                    painter = painterResource(
+                        R.drawable.facebook
+                    ),
+                    contentDescription = "",
+                    modifier = Modifier
+                        .size(50.dp)
+                        .padding(start = 20.dp)
+                )
             }
         }
     }
