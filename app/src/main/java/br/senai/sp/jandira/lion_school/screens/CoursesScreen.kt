@@ -27,6 +27,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -104,9 +105,15 @@ fun  CourseScreen(){
                         tint =Color(0xff9E9FA4)
                     )
                 },
+                colors = OutlinedTextFieldDefaults.colors(
+                    unfocusedContainerColor = Color(0xFFF5F5F5),
+                    unfocusedBorderColor = Color(0xFFFFC23D)
+                ),
                 label = {
                     Text(
-                        text = "Find your course"
+                        text = "Find your course",
+                        color = Color(0xFF9E9FA4)
+
                     )
                 }
             )
